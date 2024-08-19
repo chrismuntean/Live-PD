@@ -4,10 +4,12 @@ from scipy.signal import resample_poly, bilinear, lfilter
 import matplotlib.pyplot as plt
 from rtlsdr import RtlSdr
 
+frequency = 99.1e6
+
 # RTL-SDR setup
 sdr = RtlSdr()
 sdr.sample_rate = 2.048e6  # Hz
-sdr.center_freq = 90.6e6     # Hz
+sdr.center_freq = frequency     # Hz
 sdr.freq_correction = 60   # PPM
 sdr.gain = 'auto'
 
@@ -23,14 +25,10 @@ x = resample_poly(samples, 5, 48)
 
 # Read in signal
 sample_rate = 250e3
-center_freq = 774.41875e6
+center_freq = frequency
 
 # Demodulation (Works)
-# x = np.diff(np.unwrap(np.angle(x)))
-
-# P25 demodulation (In-Testing)
-x = x[1:] * np.conj(x[:-1])
-x = np.angle(x)
+x = np.diff(np.unwrap(np.angle(x)))
 
 # De-emphasis filter, H(s) = 1/(RC*s + 1), implemented as IIR via bilinear transform
 bz, az = bilinear(1, [75e-6, 1], fs=sample_rate)
