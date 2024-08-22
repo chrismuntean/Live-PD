@@ -19,7 +19,8 @@ RUN apt-get update && \
     gnuradio \
     python3-pip \
     sox \
-    alsa-utils
+    alsa-utils \
+    libboost-all-dev
 
 # Clone the OP25 repository
 RUN git clone https://github.com/boatbod/op25 /op25
