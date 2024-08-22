@@ -16,7 +16,7 @@ RUN apt-get update && \
     git \
     rtl-sdr \
     wget \
-    gnuradio \
+    gnuradio-dev \
     python3-pip \
     sox \
     alsa-utils \
