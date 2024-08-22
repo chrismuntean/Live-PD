@@ -7,10 +7,13 @@ ENV DEBIAN_FRONTEND=noninteractive
 # Update and install basic dependencies
 RUN apt-get update && \
     apt-get install -y \
+    sudo \
+    cmake \
     git \
     wget \
     rtl-sdr \
-    python3-pip
+    python3-pip \
+    build-essential
 
 # Clone the OP25 repository and switch to the gr310 branch
 RUN git clone https://github.com/boatbod/op25 /op25 && \
