@@ -13,10 +13,8 @@ RUN apt-get update && \
     wget \
     rtl-sdr \
     python3-pip \
-    build-essential
-
-# Install Python packages
-RUN pip3 install numpy
+    build-essential \
+    python3-numpy
 
 # Clone the OP25 repository and switch to the gr310 branch
 RUN git clone https://github.com/boatbod/op25 /op25 && \
