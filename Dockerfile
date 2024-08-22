@@ -15,6 +15,9 @@ RUN apt-get update && \
     python3-pip \
     build-essential
 
+# Install Python packages
+RUN pip3 install numpy
+
 # Clone the OP25 repository and switch to the gr310 branch
 RUN git clone https://github.com/boatbod/op25 /op25 && \
     cd /op25 && \
@@ -32,7 +35,7 @@ RUN mkdir /op25/output
 
 # Command to run OP25 and start recording
 CMD ["/bin/bash", "-c", "\
-    /op25/gr-op25_repeater/apps/rx.py \
+    /op25/op25/gr-op25_repeater/apps/rx.py \
     --args 'rtl=0' \
     -N 'LNA:47' \
     -f 774.41875e6 \
