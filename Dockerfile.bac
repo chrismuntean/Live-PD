@@ -4,20 +4,35 @@ FROM balenalib/raspberrypi3-debian:latest
 # Set environment variables for non-interactive installation
 ENV DEBIAN_FRONTEND=noninteractive
 
-# Update and install basic dependencies
+# Update and install dependencies
 RUN apt-get update && \
     apt-get install -y \
+    cmake \
+    build-essential \
+    libusb-1.0-0-dev \
+    libliquid-dev \
+    python3-numpy \
+    python3-scipy \
     git \
-    wget \
     rtl-sdr \
-    python3-pip
+    wget \
+    gnuradio-dev \
+    python3-pip \
+    sox \
+    alsa-utils \
+    libboost-all-dev \
+    libcppunit-dev \
+    pkg-config
 
 # Clone the OP25 repository
 RUN git clone https://github.com/boatbod/op25 /op25
 
-# Run the install.sh script to install dependencies and build OP25
-RUN cd /op25 && \
-    ./install.sh
+# Build OP25
+RUN mkdir -p /op25/build && \
+    cd /op25/build && \
+    cmake ../ && \
+    make && \
+    make install
 
 # Expose the port for the web interface
 EXPOSE 8080
