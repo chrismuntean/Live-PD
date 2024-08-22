@@ -3,7 +3,7 @@ FROM debian:latest
 
 # Set environment variables for non-interactive installation
 ENV DEBIAN_FRONTEND=noninteractive
-ENV PYTHONPATH=$PYTHONPATH:/usr/local/lib/python3.11/dist-packages:/usr/lib/python3.11/dist-packages:/op25/op25/gr-op25_repeater/apps/tdma
+ENV PYTHONPATH=/usr/local/lib/python3.11/dist-packages:/usr/lib/python3.11/dist-packages:/op25/op25/gr-op25_repeater/apps/tdma
 
 # Update and install basic dependencies
 RUN apt-get update && \
