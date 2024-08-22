@@ -14,7 +14,8 @@ RUN apt-get update && \
     rtl-sdr \
     python3-pip \
     build-essential \
-    python3-numpy
+    python3-numpy \
+    gnuradio
 
 # Clone the OP25 repository and switch to the gr310 branch
 RUN git clone https://github.com/boatbod/op25 /op25 && \
