@@ -20,7 +20,9 @@ RUN apt-get update && \
     python3-pip \
     sox \
     alsa-utils \
-    libboost-all-dev
+    libboost-all-dev \
+    libcppunit-dev \
+    pkg-config
 
 # Clone the OP25 repository
 RUN git clone https://github.com/boatbod/op25 /op25
