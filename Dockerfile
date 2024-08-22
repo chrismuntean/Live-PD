@@ -12,8 +12,10 @@ RUN apt-get update && \
     rtl-sdr \
     python3-pip
 
-# Clone the OP25 repository
-RUN git clone https://github.com/boatbod/op25 /op25
+# Clone the OP25 repository and switch to the gr310 branch
+RUN git clone https://github.com/boatbod/op25 /op25 && \
+    cd /op25 && \
+    git checkout gr310
 
 # Run the install.sh script to install dependencies and build OP25
 RUN cd /op25 && \
