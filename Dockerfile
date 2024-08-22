@@ -1,5 +1,5 @@
-# Use a Raspberry Pi compatible base image
-FROM balenalib/raspberrypi3-debian:latest
+# Use an x86_64 compatible base image
+FROM debian:latest
 
 # Set environment variables for non-interactive installation
 ENV DEBIAN_FRONTEND=noninteractive
