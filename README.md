@@ -21,7 +21,7 @@ pip install -r requirements.txt
 **Note**: You may want to do this inside of a Python virtual environment
 
 ## Configure environment variables
-The .env file for this repository looks like this:
+The .env file for this repository is structured as:
 ```bash
 BOT_TOKEN=YOUR_TELEGRAM_BOT_TOKEN
 STREAM_URL=https://broadcastify.cdnstream1.com/12145
@@ -42,4 +42,4 @@ python main.py
 ## Bot Screenshots
 
 ## How it works
-Live PD uses a [Broadcastify](https://www.broadcastify.com) audio stream to transcribe the transmissions with [OpenAI's Whisper](https://openai.com/index/whisper/) transcription AI model in 15 second chunks. It then sends these transciptions using [Telegram's API](https://core.telegram.org/bots) to a bot for alerts to anyone who starts the bot.
+Live PD uses a [Broadcastify](https://www.broadcastify.com) audio stream to transcribe the transmissions with [OpenAI's Whisper](https://openai.com/index/whisper/) transcription AI model in 15 second chunks. It then sends these transciptions using [Telegram's API](https://core.telegram.org/bots) to a bot for alerts to anyone who subscribes.
