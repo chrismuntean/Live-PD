@@ -28,7 +28,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     chat_id = update.effective_chat.id
     if chat_id not in subscribers:
         subscribers.append(chat_id)
-        await context.bot.send_message(chat_id=chat_id, text=f"You've subscribed to {STREAM_TITLE} updates!")
+        await context.bot.send_message(chat_id=chat_id, text=f"You've subscribed to <b>{STREAM_TITLE}</b> updates!")
 
 async def send_message_to_subscribers(text: str):
     # Send the transcribed message to all subscribers 
@@ -66,7 +66,7 @@ async def process_audio_chunks():
 
     except Exception as e:
         print(f"Error in audio processing: {e}")
-        
+
     finally:
         ffmpeg_process.terminate()
         os.remove(fifo_path)
