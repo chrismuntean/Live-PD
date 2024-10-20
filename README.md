@@ -40,6 +40,11 @@ python main.py
 ```
 
 ## Bot Screenshots
+<p align="center">
+  <img src="bot-ss-1.jpeg" alt="Screenshot 1" width="300"/>
+  <img src="bot-ss-2.jpeg" alt="Screenshot 2" width="300"/>
+  <img src="bot-ss-3.jpeg" alt="Screenshot 3" width="300"/>
+</p>
 
 ## How it works
 Live PD uses a [Broadcastify](https://www.broadcastify.com) audio stream to transcribe the transmissions with [OpenAI's Whisper](https://openai.com/index/whisper/) transcription AI model in 15 second chunks. It then sends these transciptions using [Telegram's API](https://core.telegram.org/bots) to a bot for alerts to anyone who subscribes.
