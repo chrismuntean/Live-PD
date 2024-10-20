@@ -18,7 +18,7 @@ if not os.path.exists(fifo_path):
 # Start FFmpeg process to stream audio into the pipe
 # Find other radio stations at https://www.broadcastify.com/listen/ then use developer tools to find the stream URL
 ffmpeg_command = [
-    "ffmpeg", "-y", "-i", "https://broadcastify.cdnstream1.com/12145",
+    "ffmpeg", "-y", "-ss", "30", "-i", "https://broadcastify.cdnstream1.com/12145",
     "-f", "s16le", "-acodec", "pcm_s16le", "-ac", "1", "-ar", "16000", fifo_path
 ]
 ffmpeg_process = subprocess.Popen(ffmpeg_command)
