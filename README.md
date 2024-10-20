@@ -4,7 +4,6 @@
   ### A Telegram bot that uses OpenAI's Whisper AI to transcribe live Police, Fire, EMS, Aviation, and Rail radio broadcasts from Broadcastify streams, delivering real-time updates to subscribers.
   ![GitHub commit activity](https://img.shields.io/github/commit-activity/t/chrismuntean/live-pd)
   ![Open Source](https://img.shields.io/badge/Open%20Source-%E2%9D%A4%EF%B8%8F-blue)
-  ![GitHub Release Date](https://img.shields.io/github/release-date/chrismuntean/live-pd)
 
 </div>
 
