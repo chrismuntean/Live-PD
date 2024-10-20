@@ -41,9 +41,8 @@ python main.py
 
 ## Bot Screenshots
 <p align="center">
-  <img src="readme-media/bot-ss-1.jpeg" alt="Screenshot 1" width="275"/>
-  <img src="readme-media/bot-ss-2.jpeg" alt="Screenshot 2" width="275"/>
-  <img src="readme-media/bot-ss-3.jpeg" alt="Screenshot 3" width="275"/>
+  <img src="readme-media/bot-ss-1.jpeg" alt="Screenshot 2" width="275"/>
+  <img src="readme-media/bot-ss-2.jpeg" alt="Screenshot 3" width="275"/>
 </p>
 
 ## How it works
